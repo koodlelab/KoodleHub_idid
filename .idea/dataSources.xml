@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="3824646564">
+    <data-source source="LOCAL" name="Rails KoodleHub_idid: development" uuid="0376f874-5f7c-42d5-948d-18cb0f3a88f1">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1/idid_development</jdbc-url>
+      <user-name>idid</user-name>
+      <user-password>dfc3dfcedfc3dfce</user-password>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails KoodleHub_idid: test" uuid="6081ec05-9e85-4c6d-b108-75922d98db13">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1/idid_test</jdbc-url>
+      <user-name>idid</user-name>
+      <user-password>dfc3dfcedfc3dfce</user-password>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails KoodleHub_idid: production" uuid="fa16aad7-265e-42dc-a2f2-cca6d7503fb1">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:idid_production</jdbc-url>
+      <libraries />
+    </data-source>
+  </component>
+</project>
+

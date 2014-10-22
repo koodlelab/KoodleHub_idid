@@ -1,0 +1,18 @@
+development:
+  adapter: postgresql
+  encoding: utf8
+  database: idid_development
+  host: localhost
+  username: idid
+  password: idid
+  pool: 5
+
+test: &TEST
+  adapter: postgresql
+  encoding: utf8
+  database: idid_test
+  host: localhost
+  username: idid
+  password: idid
+  pool: 5
+
