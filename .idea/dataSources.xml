@@ -20,7 +20,9 @@
     <data-source source="LOCAL" name="Rails KoodleHub_idid: production" uuid="fa16aad7-265e-42dc-a2f2-cca6d7503fb1">
       <driver-ref>postgresql</driver-ref>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql:idid_production</jdbc-url>
+      <jdbc-url>jdbc:postgresql://127.0.0.1/idid_production</jdbc-url>
+      <user-name>idid</user-name>
+      <user-password>dfc3dfcedfc3dfce</user-password>
       <libraries />
     </data-source>
   </component>
