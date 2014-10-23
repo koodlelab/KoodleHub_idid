@@ -1,14 +1,54 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>KoodleHubIdid</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+    <title><%= full_title(yield(:title)) %></title>
+    <%= stylesheet_link_tag 'application', media: 'all',
+                            'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+    <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
+    </script>
+    <![endif]-->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 
-<%= yield %>
+<header class="navbar navbar-fixed-top navbar-inverse">
+   <div class="container">
+      <div class="navbar-header"><%= link_to "Koodle Hub", '#', id: "logo" %>
+          <a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+          </a>
+      </div>
+      <div class="navbar-collapse collapse">
+          <nav>
+              <ul class="nav navbar-nav pull-right">
+                  <li><%= link_to "Home",   '#' %></li>
+                  <li><%= link_to "About",   '#' %></li>
+                  <li><%= link_to "Log in", '#' %></li>
+              </ul>
+          </nav>
+      </div>
+   </div>
+</header>
+
+<div class="container">
+  <%= yield %>
+  <footer class="footer">
+    <small>
+      @ 2014 Koodle Lab
+    </small>
+    <nav>
+      <ul>
+        <li><%= link_to "Contact", '#' %></li>
+      </ul>
+    </nav>
+  </footer>
+</div>
 
 </body>
 </html>

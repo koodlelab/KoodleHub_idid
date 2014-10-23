@@ -16,3 +16,11 @@ test: &TEST
   password: idid
   pool: 5
 
+production:
+  adapter: postgresql
+  host: localhost
+  encoding: unicode
+  database: idid_production
+  pool: 5
+  username: idid
+  password: idid
