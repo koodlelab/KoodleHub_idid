@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
             uniqueness: {case_sensitive: false}
   has_secure_password
   validates :password, length: {minimum: 5}
-  attr_accessor :remember_token, :activation_token
+  attr_accessor :remember_token, :activation_token, :reset_token
 
   # Returns the hash digest of the given string.
   def User.digest(string)
@@ -40,6 +40,10 @@ class User < ActiveRecord::Base
     update_attribute(:activated_at, Time.zone.now)
   end
 
+  def password_reset_expired?
+    reset_sent_at < 2.hours.ago
+  end
+
   # Sends activation email.
   def send_activation_email
     UserMailer.activate_account(self).deliver_now
@@ -47,6 +51,16 @@ class User < ActiveRecord::Base
 
   def forget
     update_attribute(:remember_digest, nil)
+  end
+
+  def create_reset_digest
+    self.reset_token = User.new_token
+    update_attribute(:reset_digest, User.digest(reset_token))
+    update_attribute(:reset_sent_at, Time.zone.now)
+  end
+
+  def send_password_reset_email
+    UserMailer.reset_password(self).deliver_now
   end
 
   private
